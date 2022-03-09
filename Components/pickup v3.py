@@ -26,3 +26,4 @@ while not valid:
     else:
         print("Please do not leave this blank")
 
+print (customer_details)
