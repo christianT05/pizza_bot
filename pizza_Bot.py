@@ -1,11 +1,30 @@
 # pizza bot programme
+
 import random 
 from random import randint
 
 # list of random name
+
 names = ["Herbert", "Gary", "Lisa", "Laquisha", "Abebe", "Dwayne", "Lee", "Virash", "Pam", "Muhhamed"]
 
+# Customer details dictionary
+customer_details = {}
+
+# validates inputs to check where they are blank
+
+def not_blank(question):
+    valid = False
+    while not valid:
+        response = input(question)
+        if response != "":
+            return response.title()
+        else:
+            print("Please do not leave this blank")
+
+
+
 # welcome with random names
+
 def welcome():
     '''
     Purpose: To generate a random name from the list and print out onto welcome message
@@ -20,7 +39,8 @@ def welcome():
     print("I will be here to help you order your delicious Dream Pizza!")
 
 # menu with pick up or delivery
-def pickup():
+
+def order_type():
     print ("Is your order pick up or delivery?")
     print ("For delivery please enter 1")
     print ("For pick up please enter 2")
@@ -31,23 +51,27 @@ def pickup():
                 if delivery == 1:
                     print ("Delivery!")
                     break
-
                 elif delivery == 2:
                     print ("Pickup!")
+                    pickup()
                     break
             else:
                 print ("!!! The number must be one or two !!!")
         except ValueError:
             print ("!!! I'm sorry, but that was not a valid input !!!")
             print ("!!! please enter 1 or 2 !!!")
-            
-
-
-
-
 
 # pick up Information - name and phone number
 
+def pickup():
+    question = ("Please enter your name: ")
+    customer_details ['name'] = not_blank(question)
+    #print (customer_details['name'])
+
+    question = ("Please enter your phone number: ")
+    customer_details['phone'] = not_blank(question)
+    #print (customer_details['phone'])
+    print(customer_details)
 
 
 
@@ -98,6 +122,7 @@ def main():
     Returns: None
     '''
     welcome()
-    pickup()
+    order_type()
+    
 
 main()
