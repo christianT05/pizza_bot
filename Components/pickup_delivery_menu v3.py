@@ -9,11 +9,11 @@ while True:
     try:
         delivery = int(input("Please enter a number = "))
         if delivery >= 1 and delivery <= 2:
-         if delivery == 1:
+            if delivery == 1:
                 print ("Delivery!")
                 break
 
-         elif delivery == 2:
+            elif delivery == 2:
                 print ("Pickup!")
                 break
         else:

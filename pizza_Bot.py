@@ -15,15 +15,15 @@ def welcome():
      
     num = randint(0,9)
     name = (names[num])
-    print("*** Welcome to Dream Pizzas! ***")
-    print("*** My name is",name, "***")
-    print("*** I will be here to help you order your delicious Dream Pizza! ***")
+    print("Welcome to Dream Pizzas!")
+    print("My name is",name, "")
+    print("I will be here to help you order your delicious Dream Pizza!")
 
 # menu with pick up or delivery
 def pickup():
-    print ("*** Is your order pick up or delivery? ***")
-    print ("*** For delivery please enter 1 ***")
-    print ("*** For pick up please enter 2 ***")
+    print ("Is your order pick up or delivery?")
+    print ("For delivery please enter 1")
+    print ("For pick up please enter 2")
     while True:
         try:
             delivery = int(input("Please enter a number = "))
@@ -32,14 +32,15 @@ def pickup():
                     print ("Delivery!")
                     break
 
-            elif delivery == 2:
+                elif delivery == 2:
                     print ("Pickup!")
                     break
             else:
-                print ("*** The number must be one or two ***")
+                print ("!!! The number must be one or two !!!")
         except ValueError:
-            print ("*** I'm sorry, but that was not a valid input... ***")
-            print ("*** please enter 1 or 2 ***")
+            print ("!!! I'm sorry, but that was not a valid input !!!")
+            print ("!!! please enter 1 or 2 !!!")
+            
 
 
 
