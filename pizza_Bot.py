@@ -3,7 +3,6 @@
 # Bugs: phone number input allows letters
 #       name input allows numbers 
 
-
 import random 
 from random import randint
 
@@ -11,6 +10,13 @@ from random import randint
 # list of random name
 
 names = ["Herbert", "Gary", "Lisa", "Laquisha", "Abebe", "Dwayne", "Lee", "Virash", "Pam", "Muhhamed"]
+
+# List of pizza names and prices
+
+pizza_names = ['Margherita', 'Pepperoni', 'Hawaiian', 'Cheese', 'Italian', 'Veggie', 'Vegan', 'Chicken Deluxe', 
+                'Mega Meat Lovers', 'Seafood Deluxe', 'Apricot Chicken Deluxe', 'BBQ Chicken Deluxe']
+
+pizza_prices = ['8.50', '8.50', '8.50', '8.50', '8.50', '8.50', '8.50', '13.50', '13.50', '13.50', '13.50', '13.50']
 
 
 # Customer details dictionary
@@ -112,14 +118,16 @@ def delivery_info():
 
 
 
+# pizza menu
+
+def menu():
+    number_pizzas = 12
+    for count in range(number_pizzas):
+        print("{} {} ${}" .format(count+1, pizza_names[count], pizza_prices[count]))
+
 
 
 # Choose total number of pizza's - max 5
-
-
-
-
-# create a pizza menu
 
 
 
@@ -152,6 +160,6 @@ def main():
     '''
     welcome()
     order_type()
-    
+    menu()
 
 main()
